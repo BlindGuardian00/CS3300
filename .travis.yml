@@ -1,6 +1,6 @@
 language: ruby
 cache: bundler
-bundler_args: update listen --without production
+bundler_args: --without production
 
 rvm:
  - 2.7.0
