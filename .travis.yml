@@ -1,12 +1,20 @@
 language: ruby
 cache: bundler
-bundler_args: --full-index --without production
+bundler_args: --without production
 
 rvm:
  - 2.7.0
  
 before_install:
- - gem install bundler:2.2.15
+ - gem install bundler:2.2.11
 
 script:
  - bundle exec rspec
+ 
+deploy:
+ provider: heroku
+ api_key:  77bc8b9f-0b2c-406f-9db1-bf0c993a4e3d
+ app: fathomless-beach-85456 
+ run: "rake db:migrate"
+ on:
+  branch: master 
