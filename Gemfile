@@ -27,6 +27,18 @@ gem 'jbuilder', '~> 2.5'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
+#Adding gems that were in the gem lockfile
+#but if I delete the lockfile and use the one
+#that bundle install generates, then I cannot
+#build the application. Thus, I am adding
+#whatever I found to be different between the
+#two versions of the lockfile.
+gem 'libv8-node', '~> 15.14.0.1'
+gem 'mini_portile2', '>= 2.5.0'
+gem 'nokogiri', '~> 1.11.3'
+gem 'racc', '~> 1.4'
+
+
 group :production do
   gem 'pg', '~> 0.21' # for Heroku deployment
   gem 'rails_12factor'
