@@ -248,10 +248,14 @@ DEPENDENCIES
   chromedriver-helper
   coffee-rails (~> 4.2)
   jbuilder (~> 2.5)
+  libv8-node (>= 15.14.0.1)
   listen (>= 3.0.5, < 3.2)
+  mini_portile2 (>= 2.5.0)
   mini_racer
+  nokogiri (>= 1.11.3)
   pg (~> 0.21)
   puma (~> 3.11)
+  racc (>= 1.4)
   rails (~> 5.2.5)
   rails_12factor
   rb-fsevent (>= 0.9.4)
