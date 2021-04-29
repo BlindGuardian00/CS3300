@@ -33,10 +33,6 @@ gem 'jbuilder', '~> 2.5'
 #build the application. Thus, I am adding
 #whatever I found to be different between the
 #two versions of the lockfile.
-gem 'libv8-node', '~> 15.14.0.1'
-gem 'mini_portile2', '>= 2.5.0'
-gem 'nokogiri', '~> 1.11.3'
-gem 'racc', '~> 1.4'
 
 
 group :production do
@@ -74,6 +70,10 @@ group :development do
   gem 'rb-fsevent', '>= 0.9.4'
   gem 'rb-inotify', '>= 0.9.7'
   gem 'ruby_dep', '~> 1.2'
+  gem 'libv8-node', '>= 15.14.0.1'
+  gem 'mini_portile2', '>= 2.5.0'
+  gem 'nokogiri', '>= 1.11.3'
+  gem 'racc', '>= 1.4'
 
   gem 'listen', '>= 3.0.5', '< 3.2'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
