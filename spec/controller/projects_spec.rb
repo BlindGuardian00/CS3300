@@ -1,6 +1,9 @@
 require "rails_helper"
 
 RSpec.describe ProjectsController, type: :controller do
+ 
+ login_student
+
   context "GET #index" do
     it "returns a success response" do
       get :index

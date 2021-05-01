@@ -1,8 +1,5 @@
 <%= render "navbar", project: @project %>
 <h1>Edit Article</h1>
 
-<% if flash[:alert] %>
-<div class="alert"><%= flash[:alert] %></div>
-<% end %>
 
 <%= render "form", project: @project %>

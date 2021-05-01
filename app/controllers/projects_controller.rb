@@ -1,9 +1,11 @@
 class ProjectsController < ApplicationController
 
+
   #Returns every project
   def index
     @project = Project.all
   end
+  
   
   #Finds a particular project (based on id)
   #so that the view can display this project
@@ -22,7 +24,7 @@ class ProjectsController < ApplicationController
   def create
     @project = Project.new(project_params)
     if @project.save
-      flash.alert = "Project was successfully created"
+      flash.notice = "Project was successfully created"
     else
       flash.alert = "Body can't be blank"
     end
@@ -42,7 +44,7 @@ class ProjectsController < ApplicationController
     @project = Project.find(params[:id])
 
     if @project.update(project_params)
-      flash.alert = "Project was successfully updated"
+      flash.notice = "Project was successfully updated"
     else
       flash.alert = "Body can't be blank"
     end

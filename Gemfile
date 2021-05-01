@@ -27,13 +27,7 @@ gem 'jbuilder', '~> 2.5'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
-#Adding gems that were in the gem lockfile
-#but if I delete the lockfile and use the one
-#that bundle install generates, then I cannot
-#build the application. Thus, I am adding
-#whatever I found to be different between the
-#two versions of the lockfile.
-
+gem 'devise'
 
 group :production do
   gem 'pg', '~> 0.21' # for Heroku deployment
@@ -65,6 +59,13 @@ group :development, :test do
   gem 'rb-fsevent', '>= 0.9.4'
   gem 'rb-inotify', '>= 0.9.7'
   gem 'ruby_dep', '~> 1.2'
+
+  #Adding gems that were in the gem lockfile
+  #but if I delete the lockfile and use the one
+  #that bundle install generates, then I cannot
+  #build the application. Thus, I am adding
+  #whatever I found to be different between the
+  #two versions of the lockfile.
   gem 'libv8-node', '>= 15.14.0.1'
   gem 'mini_portile2', '>= 2.5.0'
   gem 'nokogiri', '>= 1.11.3'
@@ -87,6 +88,7 @@ group :test do
   gem 'selenium-webdriver'
   # Easy installation and use of chromedriver to run system tests with Chrome
   gem 'chromedriver-helper'
+  gem 'factory_bot', '~> 4.8', '>= 4.8.2'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

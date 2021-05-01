@@ -1,0 +1,47 @@
+                     Prefix Verb   URI Pattern                                                                              Controller#Action
+           new_view_session GET    /views/sign_in(.:format)                                                                 devise/sessions#new
+               view_session POST   /views/sign_in(.:format)                                                                 devise/sessions#create
+       destroy_view_session DELETE /views/sign_out(.:format)                                                                devise/sessions#destroy
+          new_view_password GET    /views/password/new(.:format)                                                            devise/passwords#new
+         edit_view_password GET    /views/password/edit(.:format)                                                           devise/passwords#edit
+              view_password PATCH  /views/password(.:format)                                                                devise/passwords#update
+                            PUT    /views/password(.:format)                                                                devise/passwords#update
+                            POST   /views/password(.:format)                                                                devise/passwords#create
+   cancel_view_registration GET    /views/cancel(.:format)                                                                  devise/registrations#cancel
+      new_view_registration GET    /views/sign_up(.:format)                                                                 devise/registrations#new
+     edit_view_registration GET    /views/edit(.:format)                                                                    devise/registrations#edit
+          view_registration PATCH  /views(.:format)                                                                         devise/registrations#update
+                            PUT    /views(.:format)                                                                         devise/registrations#update
+                            DELETE /views(.:format)                                                                         devise/registrations#destroy
+                            POST   /views(.:format)                                                                         devise/registrations#create
+        new_student_session GET    /students/sign_in(.:format)                                                              devise/sessions#new
+            student_session POST   /students/sign_in(.:format)                                                              devise/sessions#create
+    destroy_student_session DELETE /students/sign_out(.:format)                                                             devise/sessions#destroy
+       new_student_password GET    /students/password/new(.:format)                                                         devise/passwords#new
+      edit_student_password GET    /students/password/edit(.:format)                                                        devise/passwords#edit
+           student_password PATCH  /students/password(.:format)                                                             devise/passwords#update
+                            PUT    /students/password(.:format)                                                             devise/passwords#update
+                            POST   /students/password(.:format)                                                             devise/passwords#create
+cancel_student_registration GET    /students/cancel(.:format)                                                               devise/registrations#cancel
+   new_student_registration GET    /students/sign_up(.:format)                                                              devise/registrations#new
+  edit_student_registration GET    /students/edit(.:format)                                                                 devise/registrations#edit
+       student_registration PATCH  /students(.:format)                                                                      devise/registrations#update
+                            PUT    /students(.:format)                                                                      devise/registrations#update
+                            DELETE /students(.:format)                                                                      devise/registrations#destroy
+                            POST   /students(.:format)                                                                      devise/registrations#create
+                       root GET    /                                                                                        projects#index
+           students_sign_up GET    /students/sign_up(.:format)                                                              projects#index
+                      about GET    /about(.:format)                                                                         projects#about
+                   projects GET    /projects(.:format)                                                                      projects#index
+                            POST   /projects(.:format)                                                                      projects#create
+                new_project GET    /projects/new(.:format)                                                                  projects#new
+               edit_project GET    /projects/:id/edit(.:format)                                                             projects#edit
+                    project GET    /projects/:id(.:format)                                                                  projects#show
+                            PATCH  /projects/:id(.:format)                                                                  projects#update
+                            PUT    /projects/:id(.:format)                                                                  projects#update
+                            DELETE /projects/:id(.:format)                                                                  projects#destroy
+         rails_service_blob GET    /rails/active_storage/blobs/:signed_id/*filename(.:format)                               active_storage/blobs#show
+  rails_blob_representation GET    /rails/active_storage/representations/:signed_blob_id/:variation_key/*filename(.:format) active_storage/representations#show
+         rails_disk_service GET    /rails/active_storage/disk/:encoded_key/*filename(.:format)                              active_storage/disk#show
+  update_rails_disk_service PUT    /rails/active_storage/disk/:encoded_token(.:format)                                      active_storage/disk#update
+       rails_direct_uploads POST   /rails/active_storage/direct_uploads(.:format)                                           active_storage/direct_uploads#create
