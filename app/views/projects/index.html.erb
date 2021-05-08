@@ -1,17 +1,45 @@
 <%= render "navbar", project: @project %>
 
-<h1>Projects</h1>
+<div class="jumbotron">
+        <div class="container extra-padding">
+          <h1 class="display-3">Welcome! </h1>
+          <p>
+            My name is Daniel Mitchell, and this site showcases projects that I have completed in the past. <br>
+            Each project has a description giving some idea of what it does.
+          </p>
+          </div>
+      </div>
 
-<ul>
+
+
+
+  <div class="container">
+  <div class="row">
+  <!-- Example row of columns -->
+
   <% @project.each do |project| %>
-    <li>
-        <%= link_to project.title, project %>
-        <%= link_to "Edit", edit_project_path(project) %>
-        <%= link_to "Destroy", project_path(project),
+
+  <!-- <div class="row"> -->
+    
+      <div class="col-md-4">
+        <h2><%= link_to project.title, project, :class => "btn btn-primary" %></h2>
+        <p>Description: <%= project.body %></p>
+        <p>
+        <%= link_to "Edit", edit_project_path(project), :class => "btn btn-secondary" %>
+        <%= link_to "Destroy", project_path(project), :class => "btn btn-secondary",
                          method: :delete,
                          data: { confirm: "Are you sure?" } %>
-    </li>
-  <% end %>
-</ul>
+        </p> 
+      </div>
+    
+  <!-- </div> -->
 
-<%= link_to "New Project", new_project_path %>
+   
+  <% end %>
+  </div>
+  </div>
+
+
+
+<%= link_to "New Project", new_project_path, :class => "btn btn-success new-project-label-padding" %>
+

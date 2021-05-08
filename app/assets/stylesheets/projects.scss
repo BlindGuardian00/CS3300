@@ -2,7 +2,39 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.new-project-label-padding
+{
+    padding: 5%;
+    margin: 3%;
+    display: inline-block;
+}
 
+.title-text
+{
+    padding: 1%;
+    background-color: azure;
+    text-align: center;
+}
+
+.body-text
+{
+    background-color: rgb(220, 247, 255);
+    border-style: solid;
+    border-width: 2px;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    padding-left: 2em;
+    padding-right: 2em;
+    margin-left: 5em;
+    margin-top: 2em;
+    display: inline-block;
+}
+
+.extra-padding
+{
+    margin: 1em;
+    padding: 1em;
+}
 
 // Custom bootstrap variables must be set or imported *before* bootstrap.
 @import "bootstrap";
